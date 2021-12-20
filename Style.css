@@ -1,0 +1,169 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+html{
+    font-size: 12px;
+}
+:root{
+    --font-color:#FAB162;
+}
+body{
+    min-height: 100vh;
+   
+    background-color: #191919 ;
+   color: var(--font-color);
+   white-space: none;
+    
+}
+
+header{
+    height: 60px;
+    margin: 5rem 0;
+    width: 100%;
+    text-align: center;
+    /* border: 1px solid green; */
+    font-size: 2rem;
+    text-transform: uppercase;
+
+}
+form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+    margin-left: 14rem;
+}
+
+/* input box design starts from here */
+.todo-input{
+    width: 250px;
+    padding: 0.8rem 0.8rem;
+    border: none;
+    outline: none;
+    font-size: 1.4rem;
+    font-weight: 600;
+    border-radius: 0;
+    height: 38px;
+
+}
+
+/* button design */
+
+.add-item{
+    /* padding: 0.4rem; */
+    background-color: var(--font-color);
+    border: none;
+    outline: none;
+    height: 38px;
+    padding: .5rem .5rem;
+    border-radius: 0;
+    cursor: pointer;
+    width: 34px;
+}
+input::placeholder{
+    font-size: 1.2rem;
+    text-transform: capitalize;
+    opacity: .6;
+}
+.lists-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* to-ro-list design starts here */
+.todo-list{
+    width: 260px;
+    height: 32px;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   margin: 0.5rem 0;
+   
+}
+li{
+    list-style-type: none;
+    margin: 0 10px;
+    font-size: 1.3rem;
+    color: black;
+    font-weight: 600;
+    flex: 1;
+}
+.fa-check,
+.fa-trash-alt{
+   padding: .6rem .5rem;
+   
+    color: black;
+    margin: .05rem;
+    cursor: pointer;
+}
+.fa-check{
+    background-color:lightgreen;
+}
+.fa-trash-alt{
+    background-color: rgb(255, 97, 97);
+}
+button{
+    border: none;
+    outline: none;
+    border-radius: 0;
+    transition: all 0.3s;
+}
+li{
+    transition: all .3s;
+}
+.active{
+    opacity: 0.5;
+   
+    transition: all 400ms ease;
+    text-decoration: line-through;
+}
+.delete-animation{
+    opacity: 0;
+    transform: translateY(20px) rotateZ(8deg);
+    transition: all .1s ease;
+}
+.todo-list{
+    
+    transition: all 300ms ease;
+}
+
+
+select{
+    -webkit-appearance: none;
+    appearance: none;
+    border: none;
+    outline: none;
+    -moz-appearance: none;
+   
+}
+.select{
+    margin: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+select{
+    width: 13rem;
+    font-size: 1rem;
+    padding: 0.7rem;
+    font-weight: 600;
+}
+.select::after{
+    content: "\25BC";
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: .7rem;
+    pointer-events: none;
+    transition: all .3s ease;
+
+}
+.select:hover::after{
+    background-color: var(--font-color);
+    color: #ffffff;
+}
